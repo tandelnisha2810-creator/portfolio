@@ -1,3 +1,4 @@
+/* ===== DEFAULT APP STYLES ===== */
 .App {
   text-align: center;
 }
@@ -7,12 +8,14 @@
   pointer-events: none;
 }
 
+/* ===== LOGO ANIMATION ===== */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* ===== HEADER ===== */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,6 +31,7 @@
   color: #61dafb;
 }
 
+/* ===== SPIN KEYFRAMES ===== */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +39,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ================================= */
+/* 🔥 ULTRA PREMIUM CURSOR EFFECT */
+/* ================================= */
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Cursor glow */
+.cursor-glow {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: rgba(59, 130, 246, 0.5); /* blue glow */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.08s ease;
+}
+
+/* Optional: hover effect (buttons/links pe bada ho jaye) */
+a:hover ~ .cursor-glow,
+button:hover ~ .cursor-glow {
+  transform: translate(-50%, -50%) scale(1.8);
 }

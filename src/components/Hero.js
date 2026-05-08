@@ -35,7 +35,7 @@ export default function Hero() {
     }
 
     setText(roles[index].substring(0, subIndex));
-  }, [subIndex, index, forward]);
+  }, [subIndex, index, forward],[roles]);
 
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-r from-white via-blue-50 to-gray-100 px-6 overflow-hidden">

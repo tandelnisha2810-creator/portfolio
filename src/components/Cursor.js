@@ -12,10 +12,5 @@ export default function Cursor() {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
-  return (
-    <div
-      className="cursor-glow"
-      style={{ left: pos.x, top: pos.y }}
-    />
-  );
+  return null;
 }

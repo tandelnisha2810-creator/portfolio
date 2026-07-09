@@ -32,12 +32,12 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100"
+      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100 dark:bg-gray-950 dark:from-gray-950 dark:via-gray-900/80 dark:to-gray-900/80 transition-colors duration-300"
     >
 
       {/* HEADER */}
       <div className="text-center mb-20">
-        <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-bold dark:text-white transition-colors duration-300">
           Education &{" "}
           <span className="text-blue-600">Certifications</span>
         </h2>
@@ -50,7 +50,7 @@ export default function Education() {
       </div>
 
       {/* EDUCATION */}
-      <h3 className="text-2xl font-semibold text-center mb-12 text-gray-800">
+          <h3 className="text-2xl font-semibold text-center mb-12 text-gray-800 dark:text-white transition-colors duration-300">
         Education
       </h3>
 
@@ -63,7 +63,7 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
             whileHover={{ scale: 1.05 }}
-            className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl p-6 shadow-xl hover:shadow-blue-200 transition"
+            className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 rounded-3xl p-6 shadow-xl hover:shadow-blue-200 transition transition-colors"
           >
 
             {/* ICON */}
@@ -77,7 +77,7 @@ export default function Education() {
               </p>
             </div>
 
-            <h3 className="text-xl font-bold text-gray-800">
+            <h3 className="text-xl font-bold text-gray-800 dark:text-white transition-colors duration-300">
               {item.title}
             </h3>
 
@@ -117,7 +117,7 @@ export default function Education() {
       </div>
 
       {/* CERTIFICATIONS */}
-      <h3 className="text-2xl font-semibold text-center mt-20 mb-12 text-gray-800">
+          <h3 className="text-2xl font-semibold text-center mt-20 mb-12 text-gray-800 dark:text-white transition-colors duration-300">
         Certifications & Badges
       </h3>
 

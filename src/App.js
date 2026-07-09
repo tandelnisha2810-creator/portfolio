@@ -19,23 +19,18 @@ function App() {
       <Cursor />
 
       {/* Main App */}
-      <div className="bg-gray-50">
-
-        <Navbar />
-        <Cursor />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-
-        <Experience />
-        <Education />
-        <Services />
-
-        <Contact />
-        <Footer />
-
-      </div>
+      <div className="bg-white text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-300 min-h-screen">
+  <Navbar />
+  <Hero />
+  <About />
+  <Skills />
+  <Projects />
+  <Experience />
+  <Education />
+  <Services />
+  <Contact />
+  <Footer />
+</div>
     </>
   );
 }

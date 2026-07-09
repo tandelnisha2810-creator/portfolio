@@ -3,18 +3,18 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section
+<section
       id="contact"
-      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100"
+      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100 dark:bg-gray-950 dark:from-gray-950 dark:via-gray-900/80 dark:to-gray-900/80 transition-colors duration-300"
     >
 
       {/* HEADER */}
       <div className="text-center mb-20">
-        <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-bold dark:text-white transition-colors duration-300">
           Let's <span className="text-blue-600">Connect</span>
         </h2>
 
-        <p className="text-gray-600 mt-3">
+        <p className="text-gray-600 mt-3 dark:text-gray-300 transition-colors duration-300">
           Have a project in mind? I'd love to hear from you!
         </p>
 
@@ -58,8 +58,8 @@ export default function Contact() {
               </div>
 
               <div>
-                <p className="text-gray-500 text-sm">{item.title}</p>
-                <p className="font-semibold text-gray-800">
+          <p className="text-gray-500 text-sm dark:text-gray-300 transition-colors duration-300">{item.title}</p>
+                <p className="font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
                   {item.value}
                 </p>
               </div>
@@ -85,7 +85,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-gray-200"
+          className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 transition-colors duration-300"
         >
 
           <input

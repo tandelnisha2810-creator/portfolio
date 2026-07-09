@@ -43,9 +43,9 @@ export default function Experience() {
   ];
 
   return (
-    <section
+<section
       id="experience"
-      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100"
+      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100 dark:bg-gray-950 dark:from-gray-950 dark:via-gray-900/80 dark:to-gray-900/80 transition-colors duration-300"
     >
 
       {/* HEADER */}
@@ -54,11 +54,11 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         className="text-center mb-20"
       >
-        <h2 className="text-4xl font-bold">
+<h2 className="text-4xl font-bold dark:text-white transition-colors duration-300">
           My <span className="text-blue-600">Journey</span>
         </h2>
 
-        <p className="text-gray-600 mt-3">
+        <p className="text-gray-600 mt-3 dark:text-gray-300 transition-colors duration-300">
           Milestones and experiences that shaped my career
         </p>
 
@@ -86,7 +86,7 @@ export default function Experience() {
               {/* CARD */}
               <div className="w-full md:w-1/2 relative">
 
-                <div className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl p-6 shadow-xl hover:shadow-blue-200 transition">
+                <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 rounded-3xl p-6 shadow-xl hover:shadow-blue-200 transition transition-colors">
 
                   {/* ICON */}
                   <div className={`absolute top-6 ${isLeft ? "-right-6" : "-left-6"} 
@@ -98,7 +98,7 @@ export default function Experience() {
                     {item.type}
                   </p>
 
-                  <h3 className="text-xl font-bold mt-1 text-gray-800">
+<h3 className="text-xl font-bold mt-1 text-gray-800 dark:text-white transition-colors duration-300">
                     {item.title}
                   </h3>
 

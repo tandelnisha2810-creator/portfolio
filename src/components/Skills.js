@@ -1,23 +1,41 @@
 import { motion } from "framer-motion";
-import { Code, Database, Palette, Settings } from "lucide-react";
-
+import {
+  Code,
+  Database,
+  Palette,
+  Settings,
+  Smartphone,
+  Server,
+} from "lucide-react";
 // ================= DATA =================
 
 const frontend = [
   { name: "React", level: 90 },
   { name: "JavaScript", level: 88 },
   { name: "Tailwind CSS", level: 92 },
-  { name: "HTML/CSS", level: 95 },
+  { name: "HTML", level: 95 },
+  { name: "CSS", level: 90 },
+
+];
+
+const mobile = [
   { name: "Java (Android)", level: 90 },
-  { name: "Kotlin", level: 85 },
-  { name: "Flutter", level: 88 },
+  { name: "Kotlin", level: 90 },
+  { name: "Flutter", level: 90 },
+  { name: "React Native (Expo)", level: 80 },
+  { name: "Firebase", level: 85 },
 ];
 
 const backend = [
-  { name: "Node.js", level: 75 },
-  { name: "Express", level: 78 },
-  { name: "MongoDB", level: 75 },
+  { name: "Node.js", level: 80 },
+  { name: "Express.js", level: 80 },
   { name: "REST APIs", level: 85 },
+];
+
+const database = [
+  { name: "MongoDB", level: 80 },
+  { name: "MySQL", level: 85 },
+  { name: "SQLite", level: 90 },
 ];
 
 const uiux = [
@@ -40,11 +58,11 @@ function SkillBar({ skill }) {
   return (
     <div>
       <div className="flex justify-between text-sm mb-1">
-        <span className="font-medium text-gray-700">{skill.name}</span>
+        <span className="font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">{skill.name}</span>
         <span className="text-blue-600 font-semibold">{skill.level}%</span>
       </div>
 
-      <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden transition-colors duration-300">
         <motion.div
           className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500"
           initial={{ width: 0 }}
@@ -65,7 +83,7 @@ function Card({ title, icon, data }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       whileHover={{ scale: 1.04 }}
-      className="bg-white/80 backdrop-blur-lg border border-gray-200 p-8 rounded-3xl shadow-xl hover:shadow-blue-200 transition"
+      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 p-8 rounded-3xl shadow-xl hover:shadow-blue-200 transition transition-colors"
     >
       {/* HEADER */}
       <div className="flex items-center gap-4 mb-6">
@@ -91,7 +109,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100"
+      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100 dark:bg-gray-950 dark:from-gray-950 dark:via-gray-900/80 dark:to-gray-900/80 transition-colors duration-300"
     >
       {/* HEADER */}
       <motion.div
@@ -114,37 +132,74 @@ export default function Skills() {
       {/* GRID */}
       <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6">
 
-        <Card title="Frontend Development" icon={<Code />} data={frontend} />
-        <Card title="Backend Development" icon={<Database />} data={backend} />
-        <Card title="UI/UX Design" icon={<Palette />} data={uiux} />
-        <Card title="Tools & Technologies" icon={<Settings />} data={tools} />
+  <Card
+    title="Frontend Development"
+    icon={<Code />}
+    data={frontend}
+  />
 
-      </div>
+  <Card
+    title="Mobile Development"
+    icon={<Smartphone />}
+    data={mobile}
+  />
 
+  <Card
+    title="Backend Development"
+    icon={<Server />}
+    data={backend}
+  />
+
+  <Card
+    title="Database"
+    icon={<Database />}
+    data={database}
+  />
+
+  <Card
+    title="UI/UX Design"
+    icon={<Palette />}
+    data={uiux}
+  />
+
+  <Card
+    title="Tools & Technologies"
+    icon={<Settings />}
+    data={tools}
+  />
+
+</div>
       {/* TAGS */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         className="mt-20 text-center"
       >
-        <h3 className="text-lg font-semibold mb-8 text-gray-700">
+        <h3 className="text-lg font-semibold mb-8 text-gray-700 dark:text-gray-200 transition-colors duration-300">
           Quick Skills Overview
         </h3>
 
         <div className="flex flex-wrap justify-center gap-4">
-          {[
-            "React",
-            "JavaScript",
-            "Tailwind",
-            "Java",
-            "Kotlin",
-            "Flutter",
-            "Node.js",
-            "MongoDB",
-            "Git",
-            "Android Studio",
-            "REST APIs",
-          ].map((tag, i) => (
+          {
+         [
+  "Java",
+  "Kotlin",
+  "Flutter",
+  "React.js",
+  "React Native",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "MySQL",
+  "SQLite",
+  "Firebase",
+  "REST APIs",
+  "Git",
+  "GitHub",
+  "Android Studio",
+  "VS Code",
+]
+          .map((tag, i) => (
             <motion.span
               key={i}
               whileHover={{ scale: 1.1 }}

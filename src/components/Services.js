@@ -48,15 +48,16 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100"
+      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100 dark:bg-gray-950 smooth transition-colors"
     >
 
       {/* HEADER */}
       <div className="text-center mb-20">
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-bold dark:text-white">
           Services I <span className="text-blue-600">Offer</span>
         </h2>
-        <p className="text-gray-600 mt-3">
+
+        <p className="text-gray-600 dark:text-gray-400 mt-3">
           Turning ideas into modern digital experiences
         </p>
         <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded"></div>
@@ -72,7 +73,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
             whileHover={{ scale: 1.07, rotateY: 5 }}
-            className="bg-white/80 backdrop-blur-lg border border-gray-200 p-8 rounded-3xl shadow-xl hover:shadow-blue-200 transition duration-300"
+            className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 p-8 rounded-3xl shadow-xl hover:shadow-blue-200 transition duration-300 transition-colors"
           >
 
             {/* ICON */}
@@ -80,11 +81,11 @@ export default function Services() {
               {item.icon}
             </div>
 
-            <h3 className="text-xl font-bold mt-6 text-gray-800">
+            <h3 className="text-xl font-bold mt-6 text-gray-800 dark:text-gray-300">
               {item.title}
             </h3>
 
-            <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-3 leading-relaxed">
               {item.desc}
             </p>
 
@@ -110,7 +111,7 @@ export default function Services() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.2 }}
             whileHover={{ scale: 1.08 }}
-            className="bg-white/80 backdrop-blur-lg border border-gray-200 p-8 rounded-3xl shadow-lg hover:shadow-blue-200 transition text-center"
+            className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 p-8 rounded-3xl shadow-lg hover:shadow-blue-200 transition text-center transition-colors"
           >
 
             <span className="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
@@ -121,11 +122,11 @@ export default function Services() {
               {item.icon}
             </div>
 
-            <h3 className="text-lg font-bold mt-4 text-gray-800">
+            <h3 className="text-lg font-bold mt-4 text-gray-800 dark:text-gray-300">
               {item.title}
             </h3>
 
-            <p className="text-gray-600 text-sm mt-2">
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
               {item.desc}
             </p>
 
@@ -148,13 +149,13 @@ export default function Services() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="max-w-4xl mx-auto bg-white/80 backdrop-blur-lg border border-gray-200 p-10 rounded-3xl shadow-xl text-center"
+        className="max-w-4xl mx-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 p-10 rounded-3xl shadow-xl text-center transition-colors"
       >
-        <h3 className="text-2xl font-bold mb-4 text-gray-800">
+        <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-300">
           My Long-term Vision
         </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           I aim to become a skilled full-stack developer and build impactful applications.
           My goal is to create solutions that solve real-world problems while continuously learning and growing.
         </p>
@@ -166,7 +167,7 @@ export default function Services() {
           Let's <span className="text-blue-600">Connect</span>
         </h2>
 
-        <p className="text-gray-600 mt-2">
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
           Have an idea or project? Let’s build something amazing together.
         </p>
 

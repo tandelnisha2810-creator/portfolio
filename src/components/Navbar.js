@@ -6,8 +6,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("about");
   const [scrolled, setScrolled] = useState(false);
-  const [dark, setDark] = useState(false);
-  const [progress, setProgress] = useState(0);
+const [dark, setDark] = useState(() => {
+  return localStorage.getItem("theme") === "dark";
+});  const [progress, setProgress] = useState(0);
 
   // ✅ FIXED WITH useMemo
   const navLinks = useMemo(() => [
@@ -60,16 +61,16 @@ export default function Navbar() {
 
   }, [navLinks]);
 
-  // 🌙 Dark Mode
-  useEffect(() => {
-
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-  }, [dark]);
+ // 🌙 Dark Mode
+useEffect(() => {
+  if (dark) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+}, [dark]);
 
   return (
     <>
@@ -80,14 +81,14 @@ export default function Navbar() {
       ></div>
 
       {/* NAVBAR */}
-      <nav
-        className={`sticky top-0 z-50 transition-all duration-300
-        ${
-          scrolled
-            ? "bg-white/70 backdrop-blur-xl shadow-lg border-b border-gray-200"
-            : "bg-white/40 backdrop-blur-md"
-        }`}
-      >
+     <nav
+  className={`sticky top-0 z-50 transition-all duration-300
+  ${
+    scrolled
+      ? "bg-white/70 backdrop-blur-xl shadow-lg border-b border-gray-200 dark:bg-gray-900/80 dark:border-gray-700"
+      : "bg-white/40 backdrop-blur-md dark:bg-gray-900/60"
+  }`}
+>
 
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
@@ -107,8 +108,8 @@ export default function Navbar() {
                 className={`relative transition duration-300 group
                 ${
                   active === item.link
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-700"
+  ? "text-blue-400 font-semibold"
+  : "text-gray-700 dark:text-gray-200"
                 }`}
               >
 
@@ -130,8 +131,7 @@ export default function Navbar() {
             {/* 🌙 Dark Toggle */}
             <button
               onClick={() => setDark(!dark)}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
-            >
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition"            >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 

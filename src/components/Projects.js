@@ -9,39 +9,64 @@ const fallback =
 const projects = [
   {
     title: "Eye Care App",
-    desc: "Android mobile application built using Java for eye health tracking and reminders.",
-    tech: ["Java", "Android", "SQLite"],
-    img: "https://images.unsplash.com/photo-1581091870627-3c9f6f7b5d63?auto=format&fit=crop&w=800&q=80",
+    desc: "Android application developed using Java to help users maintain eye health with reminders, exercises, and daily tracking.",
+    tech: ["Java", "Android Studio", "SQLite"],
+    img: "https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
+
   {
     title: "Recipe Finder",
-    desc: "API-based application to search recipes with modern UI and fast results.",
+    desc: "Responsive web application that allows users to search recipes using a public API with a clean and modern user interface.",
     tech: ["React", "API", "Tailwind CSS"],
-    img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
+
   {
-    title: "AI Chat App",
-    desc: "Real-time chatbot using AI with clean UI and fast response system.",
-    tech: ["React", "Node.js", "OpenAI"],
-    img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    title: "Smart MP3 Cutter",
+    desc: "Flutter-based mobile application that allows users to trim MP3 files, merge audio, preview music, and manage audio files with a clean modern interface.",
+    tech: ["Flutter", "Dart", "FFmpeg", "Hive", "Firebase"],
+    img: "https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
+
   {
-    title: "Weather Dashboard",
-    desc: "Weather app showing real-time data using APIs with responsive UI.",
-    tech: ["React", "Weather API", "Chart.js"],
-    img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+    title: "SmartTrip AI",
+    desc: "AI-powered travel planner that generates complete travel itineraries using Gemini AI with maps, destination recommendations, budgeting, and trip management.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Gemini AI",
+      "Express",
+      "Tailwind CSS",
+    ],
+    img: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
+
   {
-    title: "Portfolio Website",
-    desc: "Personal portfolio built with React and Tailwind with modern UI.",
-    tech: ["React", "Tailwind", "Framer Motion"],
-    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    title: "StudyGenie AI",
+    desc: "AI Study Assistant that helps students generate notes, summaries, quizzes, flashcards, and answers using Gemini AI with Firebase authentication.",
+    tech: [
+      "React Native",
+      "Expo",
+      "Firebase",
+      "MongoDB",
+      "Gemini AI",
+      "Node.js",
+    ],
+    img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
+
   {
-    title: "Student Management App",
-    desc: "Mobile app to manage student records built with Kotlin & SQLite.",
-    tech: ["Kotlin", "Android", "SQLite"],
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    title: "InstaMate Pro",
+    desc: "Instagram toolkit that allows users to download Instagram posts, reels, stories, profile images, hashtags, and media information with a modern dashboard.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "REST API",
+    ],
+    img: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
 
@@ -54,7 +79,7 @@ function ProjectCard({ p, i }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: i * 0.1 }}
       whileHover={{ scale: 1.05 }}
-      className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl overflow-hidden shadow-xl hover:shadow-blue-200 transition duration-300"
+      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 rounded-3xl overflow-hidden shadow-xl hover:shadow-blue-200 transition duration-300 transition-colors"
     >
       {/* IMAGE */}
       <div className="overflow-hidden relative">
@@ -71,7 +96,7 @@ function ProjectCard({ p, i }) {
 
       {/* CONTENT */}
       <div className="p-6 text-left">
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">
+<h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-300">
           {p.title}
         </h3>
 
@@ -101,7 +126,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100"
+      className="py-24 bg-gradient-to-r from-white via-blue-50 to-gray-100 dark:bg-gray-950 dark:from-gray-950 dark:via-gray-900/80 dark:to-gray-900/80 transition-colors duration-300"
     >
       {/* HEADER */}
       <motion.div

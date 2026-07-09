@@ -10,13 +10,12 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 // 🔥 Cursor Import
-import Cursor from "./components/Cursor";
+//import Cursor from "./components/Cursor";
 
 function App() {
   return (
     <>
       {/* 🔥 Cursor Effect */}
-      <Cursor />
 
       {/* Main App */}
       <div className="bg-white text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-300 min-h-screen">

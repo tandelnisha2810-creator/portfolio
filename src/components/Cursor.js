@@ -5,12 +5,24 @@ export default function Cursor() {
 
   useEffect(() => {
     const move = (e) => {
-      setPos({ x: e.clientX, y: e.clientY });
+      setPos({
+        x: e.clientX,
+        y: e.clientY,
+      });
     };
 
     window.addEventListener("mousemove", move);
+
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
-  return null;
+  return (
+    <div
+      className="cursor-glow"
+      style={{
+        left: pos.x,
+        top: pos.y,
+      }}
+    />
+  );
 }
